@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".Promotion">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/profile_detail"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <Button
+                android:id="@+id/promotionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="30dp"
+                android:background="@drawable/baseline_arrow_back_ios_24"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/search"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <!-- EditText for search input -->
+                    <EditText
+                        android:id="@+id/searchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="20dp"
+                        android:padding="10dp"
+                        android:hint="Search"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Promotion"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="8dp"
+                android:background="#e91e63">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/burger"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="153dp"
+                        android:layout_height="104dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-16dp"
+                        android:visibility="visible"
+                        card_view:srcCompat="@drawable/deluxe" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deluxe"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_toStartOf="@id/image"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order now"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/title"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Added TextView for Price Label -->
+                    <TextView
+                        android:id="@+id/price_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/description"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Price Value -->
+                    <TextView
+                        android:id="@+id/price_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description"
+                        android:layout_toEndOf="@id/price_label"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:text="$4.20"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+
+                    <!-- Added TextView for Discount Label -->
+                    <TextView
+                        android:id="@+id/discount_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/price_label"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Discount Value -->
+                    <TextView
+                        android:id="@+id/discount_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/price_value"
+                        android:layout_toEndOf="@id/discount_label"
+                        android:layout_marginStart="4dp"
+                        android:text="10%"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="8dp"
+                android:background="#e91e63">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView30"
+                        android:layout_width="153dp"
+                        android:layout_height="104dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-16dp"
+                        android:visibility="visible"
+                        card_view:srcCompat="@drawable/bacon_and_cheese" />
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/burger"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bacon and cheese"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_toStartOf="@id/image1"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <TextView
+                        android:id="@+id/description1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order now"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/title1"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Added TextView for Price Label -->
+                    <TextView
+                        android:id="@+id/price_label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/description1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Price Value -->
+                    <TextView
+                        android:id="@+id/price_value1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description1"
+                        android:layout_toEndOf="@id/price_label1"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:text="$5.00"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+
+                    <!-- Added TextView for Discount Label -->
+                    <TextView
+                        android:id="@+id/discount_label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/price_label1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Discount Value -->
+                    <TextView
+                        android:id="@+id/discount_value1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/price_value1"
+                        android:layout_toEndOf="@id/discount_label1"
+                        android:layout_marginStart="4dp"
+                        android:text="10%"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="8dp"
+                android:background="#e91e63">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView35"
+                        android:layout_width="153dp"
+                        android:layout_height="104dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-16dp"
+                        android:visibility="visible"
+                        card_view:srcCompat="@drawable/mushroom_swiss" />
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/burger"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mushroom and Swiss"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_toStartOf="@id/image2"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <TextView
+                        android:id="@+id/description2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order now"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/title2"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Added TextView for Price Label -->
+                    <TextView
+                        android:id="@+id/price_label2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/description2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Price Value -->
+                    <TextView
+                        android:id="@+id/price_value2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description2"
+                        android:layout_toEndOf="@id/price_label2"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:text="$4.00"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+
+                    <!-- Added TextView for Discount Label -->
+                    <TextView
+                        android:id="@+id/discount_label2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/price_label2"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Discount Value -->
+                    <TextView
+                        android:id="@+id/discount_value2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/price_value2"
+                        android:layout_toEndOf="@id/discount_label2"
+                        android:layout_marginStart="4dp"
+                        android:text="10%"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="8dp"
+                android:background="#e91e63">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView36"
+                        android:layout_width="153dp"
+                        android:layout_height="104dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-16dp"
+                        android:visibility="visible"
+                        card_view:srcCompat="@drawable/double_big_mac" />
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/burger"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Big Mac"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_toStartOf="@id/image3"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <TextView
+                        android:id="@+id/description3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order now"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/title3"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Added TextView for Price Label -->
+                    <TextView
+                        android:id="@+id/price_label3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/description3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Price Value -->
+                    <TextView
+                        android:id="@+id/price_value3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description3"
+                        android:layout_toEndOf="@id/price_label3"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:text="4.00$"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+
+                    <!-- Added TextView for Discount Label -->
+                    <TextView
+                        android:id="@+id/discount_label3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/price_label3"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Discount Value -->
+                    <TextView
+                        android:id="@+id/discount_value3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/price_value3"
+                        android:layout_toEndOf="@id/discount_label3"
+                        android:layout_marginStart="4dp"
+                        android:text="10%"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="8dp"
+                android:background="#e91e63"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="8dp"
+                android:background="#e91e63">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageView38"
+                        android:layout_width="125dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="0dp"
+                        android:visibility="visible"
+                        card_view:srcCompat="@drawable/cheeseburger" />
+
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/burger"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/title5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Burger With Cheese"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:layout_toStartOf="@id/image5"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <TextView
+                        android:id="@+id/description5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order now"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/title5"
+                        android:layout_alignParentStart="true" />
+
+                    <!-- Added TextView for Price Label -->
+                    <TextView
+                        android:id="@+id/price_label5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/description5"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Price Value -->
+                    <TextView
+                        android:id="@+id/price_value5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description5"
+                        android:layout_toEndOf="@id/price_label5"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:text="4.00@"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+
+                    <!-- Added TextView for Discount Label -->
+                    <TextView
+                        android:id="@+id/discount_label5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount:"
+                        android:textColor="@color/black"
+                        android:layout_below="@id/price_label5"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Added TextView for Discount Value -->
+                    <TextView
+                        android:id="@+id/discount_value5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/price_value5"
+                        android:layout_toEndOf="@id/discount_label5"
+                        android:layout_marginStart="4dp"
+                        android:text="10%"
+                        android:textColor="@color/price"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

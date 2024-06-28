@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <color android:name="primary"
+        tools:ignore="ExtraText">#201E20</color>
+    <color name="secondary"
+        tools:ignore="MissingPrefix">#0c0214</color>
+    <color name="accent"
+        tools:ignore="MissingPrefix">#F1E9E9</color>
+    <color name="variant"
+        tools:ignore="MissingPrefix">#87828a</color>
+    <color name="detailItem"
+        tools:ignore="MissingPrefix">#0d0213</color>
+    <color name="background_card"
+        tools:ignore="MissingPrefix">#1f1f1f</color>
+</resources>

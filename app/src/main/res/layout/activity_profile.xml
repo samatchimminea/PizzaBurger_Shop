@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/profile_detail"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            >
+
+            <Button
+                android:id="@+id/profileButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="30dp"
+                android:background="@drawable/baseline_arrow_white_ios_24">
+            </Button>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="700dp"
+                        android:layout_height="300dp"
+                        android:scaleType="center"
+                        android:src="@drawable/pizza_poster" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/variant" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp">
+
+        </LinearLayout>
+        <View
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/variant" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Menu"
+                android:textSize="35sp"
+                android:textColor="@color/text" />
+
+        </RelativeLayout>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- First Card -->
+                    <RelativeLayout
+                        android:id="@+id/cardLayout1"
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:onClick="onCardClick"
+                        android:background="@drawable/card">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/double_pepperoni" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pizza"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Double Pepperoni"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$19.30"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Second Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView14"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/tomato_shrimp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pizza"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tomato Shrimp"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$22.22"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Third Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView16"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/berbecue_pork" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pizza"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Barbecue Pork"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$20.00"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- forth Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView25"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/hawaiian" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Pizza"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hawaiian"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$22.22"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- First Card -->
+                    <RelativeLayout
+                        android:id="@+id/cardLayout2"
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:clickable="true"
+                        android:onClick="onCardClick"
+                        android:background="@drawable/card">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView26"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/deluxe" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Burger"
+                                    android:textColor="@color/background_card"
+                                    android:textSize="16dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Deluxe"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$4.20"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Second Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView27"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/bacon_and_cheese" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Burger"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bacon and Cheese"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$5.00"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- Third Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView28"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/mushroom_swiss" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Burger"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mushroom and Swiss"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$4.00"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <!-- forth Card -->
+                    <RelativeLayout
+                        android:layout_width="330dp"
+                        android:layout_height="420dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/heart"
+                                android:gravity="end" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/imageView29"
+                                android:layout_width="match_parent"
+                                android:layout_height="330dp"
+                                app:srcCompat="@drawable/big_mac" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Burger"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="Current Price"
+                                    android:textColor="@color/variant"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Big Mac"
+                                    android:textColor="@color/text"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="$4.00"
+                                    android:textColor="@color/price"
+                                    android:textSize="20dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
